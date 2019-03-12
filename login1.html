@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="hom.css">
+    <style>
+        #side-bar{
+            height:800px;
+            margin:10px;
+        }
+.k{
+color:orange;
+}
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img1.jpg" style="width:100% ;height:220px">
+                <div class="text"><b>University Of Miami</b></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img2.jpg" style="width:100% ;height:220px">
+                <div class="text">E<b>University Of Miami</b></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img3.jpg" style="width:100% ;height:220px">
+                <div class="text"><b>University Of Miami</b></div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+    <div id="nav-list">
+        <ul id="n-list">
+            <li class="li-class"><a
+                    href="Login.html"
+                    target="">Login</a></li>
+            <li class="li-class"><a href=""
+                    target="blank">Signup</a></li>
+            <li class="li-class"><a
+                    href=""
+                    target="blank">Home</a></li>
+            <li class="li-class"><a href=""
+                    target=" ">Rest</a></li>
+        </ul>
+    </div>
+
+    <div id="login">
+        <h1> Login </h1>
+        <label for="username"><b>User name</b></label>
+        <input type="text" id="username" placeholder="username" name="username" required><br>
+        <span id="name"></span>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="password" name="psw" placeholder="password" required><br>
+        <span id="password"></span>
+        <button onClick="submits()"> login</button>
+        <button onClick="navSignup()"> signup</button>
+    </div>
+    <div id="side-bar">
+        <h2>MIAMI</h2>
+        <nav>
+            <img src="img11.jpg" height="130" width="130" alt="deal"></a>
+            <img src="img22.jpg" height="130" width="130" alt="deal"> </a>
+            <img src="img33.jpg" height="130" width="130" alt="deal"></a>
+            <img src="img4.jpg" height="130" width="130" alt="deal"></a>
+            <img src="img5.jpg" height="130" width="130" alt="deal"></a>
+            <img src="img6.jpg" height="130" width="130" alt="deal"></a>
+            <img src="img7.JPG" height="130" width="130" alt="deal"> </a>
+            <img src="img8.jpg" height="130" width="130" alt="deal"> </a>
+        </nav>
+    </div>
+
+
+    <footer>
+        <h1 class="k"><center><b><Description</b></center></h1> 
+        <p>  The College of Engineering at University of Miami has 56 full-time faculty on staff. University of Miami is ranked No. 97 (tie) in Best Engineering Schools. Schools are ranked according to their performance across a set of widely accepted indicators of excellence.
+Miami follows Princeton and Georgia State, making Miami the No. 2 public school in the nation. ... Miami's College of Engineering and Computing (CEC) was ranked 30 of 205 schools for its undergraduate engineering program with no doctorate program.
+The most popular majors at Miami University--Oxford include: Business, Management, Marketing, and Related Support Services; Communication, Journalism, and Related Programs; Social Sciences; Health Professions and Related Programs; and Education</p>
+
+ </footer>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+        function submits() {
+            var x = document.getElementById("username").value;
+            var y = document.getElementById("password").value;
+            console.log(x);
+            if (x == "" || y == "") {
+                document.getElementById('login').innerHTML = 'Invalid submission';
+            }
+            else {
+                document.getElementById('login').innerHTML = 'Hi.. welcome, you are sucessfully logged in !';
+            }
+        }
+        function navSignup(){
+            window.location.href = "signup.html";   
+        }
+    </script>
+
+</body>
+
+</html>
