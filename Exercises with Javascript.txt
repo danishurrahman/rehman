@@ -1,0 +1,39 @@
+EXERCISES WITH ButtonDemo.html
+
+The web page specified by ButtonDemo.html contains a button with which it is possible to
+change the text that is shown on the screen. The file ButtonDemo.html has a JavaScript
+function named change_text() which is called after the button is pressed. When the button is
+pressed repeatedly the text changes Hello! ... Well done! ... Hello! ... Well done! ... Hello! ...
+
+Exercise 1:
+Modify the program so that the initial text shown on the screen is "Monday", and it will
+change in the following way when the button is pressed repeatedly: Monday ... Tuesday ...
+Wednesday ... Thursday ... Friday ... Saturday ... Sunday ... Monday ... Tuesday ... etc.
+You should also change the button text so that there is written "Change day" on the button.
+One way to solve this problem is to write a long if ... else if ... else if ... construct inside
+the JavaScript function. This is probably an easy way to solve the problem.
+Another possibility is to use an array of strings and an index variable. You can add the
+following definitions right before the change_text() function
+var day_index = 0 ;
+var days_of_week = [ "Monday", "Tuesday", "Wednesday", "Thursday",
+"Friday", "Saturday", "Sunday" ] ;
+
+When you have an array like the one above, you can, after the button is pressed, increment
+the index variable and take one string from the array. When the index variable has a correct
+value, the text can be modified with the statement
+text_element.innerHTML = days_of_week[ day_index ] ;
+
+Exercise 2:
+Improve the program by adding another centered text and another button to the page. When
+the new button is pressed it should change the new text in the following way: January ...
+February ... March ... April ... etc.
+You should use a new JavaScript function that will be called after the new button is pressed.
+You could also use the following definitions in your program:
+var month_index = 0 ;
+var names_of_months = [ "January", "February", "March", "April",
+"May", "June", "July", "August",
+"September", "October", "November", "December" ] ;
+
+Exercise 3:
+Use CSS definitions to make the background of the entire page light yellow. Studying the
+page Game.html should be helpful when doing this and the following exercise.
