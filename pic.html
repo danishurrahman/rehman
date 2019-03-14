@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+                $(document).ready(function () {
+                    $("#enlarge").click(function () {
+                        var width = parseInt($("img").width());
+                        var height = parseInt($("img").height());
+                        var width = width + 100;
+                        var height = height + 100;
+                        $("img").width(width);
+                        $("img").height(height);
+                    });
+                    $("#shrink").click(function () {
+                        var width = parseInt($("img").width());
+                        var height = parseInt($("img").height());
+                        var width = width - 100;
+                        var height = height - 100;
+                        $("img").width(width);
+                        $("img").height(height);
+                    });
+                });
+            </script>
+</head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../lib/w3.css">
+<body>
+
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="img" >
+<center>
+<img id="temp" class="mySlides" src="p1.jpg" height=500px width=100% >
+<img class="mySlides" src="p2.jpg" height=500px width=100%>
+<img class="mySlides" src="p3.jpg" height=500px width=100%>
+<img class="mySlides" src="p4.jpg" height=500px width=100%>
+
+<button onclick="plusDivs(-1)">Next</button>
+<button onclick="plusDivs(1)">Prev</button>
+
+<button id="enlarge">Large</button>
+<button id="shrink">Small</button>
+
+</center>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+</script>
+<style>
+.img
+{
+border:2px solid;
+height:80%;
+width:80%;
+border-sizing:box-border;
+}
+body
+{
+background-color:black;
+}
+
+</style>
+</body>
+</html> 

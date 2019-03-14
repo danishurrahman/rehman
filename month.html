@@ -1,0 +1,56 @@
+<html>
+<head>
+
+<style>
+body
+{
+ background-color:#F9E79F;
+}
+#d
+{
+ border:2px solid;
+ height:50%;
+  width:50%;
+ text-align:center;
+}
+</style>
+<script>
+ var day=1;
+ var k=1;
+ function week()
+{
+var week=[ "Monday" ,"Tuesday", "Wednesday" ,"Thursday", "Friday", "Saturday" ,"Sunday"];
+document.getElementById("demo").innerHTML=week[ day++];
+if(day>=7)
+{
+ day=0;
+}
+}
+
+function month()
+{
+var month=[ "January" ,"February", "March" ,"April", "May", "June" ,"July","August","Septeber","October","November","December"];
+document.getElementById("demo2").innerHTML=month[k++];
+if(k>=12)
+{
+ k=0;
+}
+}
+</script>
+
+</head>
+
+<body>
+<div id="d">
+<h1 id="demo">Monday</h1>
+
+<button onclick="week()"> change</button>
+
+<h1 id="demo2">January</h1>
+
+<button onclick="month()"> changemonth</button>
+
+</div>
+
+</body>
+</html>
