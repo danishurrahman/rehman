@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+body{background-color:green;
+	}
+</style>
+<script>
+function validate()
+{
+var uname=document.logform.uname.value;
+var pwd=document.logform.pwd.value;
+if(uname==null||uname=="")
+{
+alert("invalid username");
+return false;
+}else if(pwd.length<6)
+{
+alert("password needs four character");
+return false;
+}
+if(pwd.search(/[a-z]/)==-1){
+alert("password need lowercase");
+return false;
+}
+if(pwd.search(/[A-Z]/)==-1){
+alert("password need uppercase");
+return false;
+}
+if(pwd.search(/[0-9]/)==-1){
+alert("password need number between 0 to 9");
+return false;
+}else
+{
+alert("verified");
+}
+}
+</script>
+</head>
+<body>
+<center>
+ <h1> you have to sign in or signup</h1>
+<form name="logform" onsubmit="return validate()">
+    <input type="text" name="uname" placeholder="UserName" required><br><br>
+     <input type="password" name="pwd" placeholder="password" required><br>
+     <input type="submit" value="login">
+</form>
+      <a href="register.html" target="frame6"><button>SignUp</button></a>
+     </center></body>
+     </html>
+
