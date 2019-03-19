@@ -1,6 +1,6 @@
 <?php
 
-require 'assets/dbInfo.php';
+include 'assets/dbInfo.php';
 
 $query = "SELECT id, first_name, last_name, pen_name FROM Authors ORDER BY first_name";
 $resultObj = $connection->query($query);
@@ -31,9 +31,9 @@ $resultObj = $connection->query($query);
                 </div>		
                 <div class="multiple">
                     <label>Favorite Century:</label>
-                    17th Century <input type="checkbox" name="century" value="17th">
-                    18th Century <input type="checkbox" name="century" value="18th"> 
-                    19th Century <input type="checkbox" name="century" value="19th"> 
+                    17th Century <input type="checkbox" name="century[]" value="17th">
+                    18th Century <input type="checkbox" name="century[]" value="18th"> 
+                    19th Century <input type="checkbox" name="century[]" value="19th"> 
                 </div>
                 <div>
                     <label>Comments:</label>

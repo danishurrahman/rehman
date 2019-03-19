@@ -1,3 +1,12 @@
+<?php
+
+echo "<pre>";
+print_r($_GET);
+echo "</pre>";
+
+echo $_GET['author'];
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
