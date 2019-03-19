@@ -1,9 +1,9 @@
 <?php
 
-$dbPassword = "PHPFundamentals";
-$dbUserName = "PHPFundamentals";
+$dbPassword = "password!23";
+$dbUserName = "sample";
 $dbServer = "localhost";
-$dbName = "PHPFundamentals";
+$dbName = "sampletable";
 
 $connection = new mysqli($dbServer, $dbUserName, $dbPassword, $dbName);
 
