@@ -1,298 +1,199 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
+
 <head>
-    <title>EduComp Quiz Assignment</title>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="index.css">
+    </head>
 
-    <style>
-        body {
-
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        #title {
-            text-decoration: underline;
-        }
-
-        #quiz {
-            text-indent: 10px;
-            display:none;
-        }
-
-        .button {
-            border:4px solid;
-            border-radius:5px;
-            width: 50px;
-            padding-left:5px;
-            padding-right: 5px;
-            position: relative;
-            float:right;
-            background-color: #DCDCDC;
-            color: black;
-            margin: 0 2px 0 2px;
-        }
-
-        .button.active {
-            background-color: #F8F8FF;
-            color: #525252;
-        }
-
-        button {
-            position: relative;
-            float:right;
-        }
-
-        .button a {
-            text-decoration: none;
-            color: black;
-        }
-
-        #container {
-            width:50%;
-            margin:auto;
-            padding: 0 25px 40px 10px;
-            background-color: #1E90FF;
-            border:4px solid #B0E0E6;
-            border-radius:5px;
-            color: #FFFFFF;
-            font-weight: bold;
-            box-shadow: 5px 5px 5px #888;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #prev {
-            display:none;
-        }
-
-        #start {
-            display:none;
-            width: 90px;
-        }
-    </style>
-</head>
 <body>
-<div id='container'>
-    <div id='title'>
-        <h1>EduComp Quiz Competition</h1>
+
+    <div class="sidenav">
+        <a href="#"><img src="Assets/Assets/history.svg"></a>
+        <a href="#"><img src="Assets/Assets/home-ficon.svg" style="height: 40px; width: 40px; background:#7373fe;"></a>       
     </div>
-    <br/>
-    <div id="quiz"></div>
-    <div class='button' id='next'><a href='#'>Next</a></div>
-    <div class='button' id='prev'><a href='#'>Prev</a></div>
-    <div class='button' id='start'> <a href='#'>Start Over</a></div>
-</div>
-<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<script type="text/javascript" src='/data/EduCompQuiz_data.json'></script>
-<script>
-    (function() {
-        var questions = [{
-            difficulty: "difficulty-E",
-            question: "Washing soda is the common name for?",
-            choices: ['Sodium carbonate','Calcium bicarbonate','Sodium bicarbonate','Calcium carbonate'],
-            correctAnswer: "Sodium carbonate"
-        }, {
-            difficulty: "difficulty-E",
-            question: "Which of the gas is not known as green house gas?",
-            choices: ['Methane','Nitrous oxide','Carbon dioxide','Hydrogen'],
-            correctAnswer: "Hydrogen"
-        }, {
-            difficulty: "difficulty-E",
-            question: "Under Akbar, the Mir Bakshi was required to look after",
-            choices: ['military affairs','the state treasury','the royal household','the land revenue system'],
-            correctAnswer: "military affairs"
-        }, {
-            difficulty: "difficulty-E",
-            question: "The Vedic deity Indra is the God of",
-            choices: ['Wind','Eternity','Rain and Thunder','Fire'],
-            correctAnswer: "Rain and Thunder"
-        }, {
-            difficulty: "difficulty-E",
-            question: "The minimum age to qualify for election to the Lok Sabha is",
-            choices: ['25 years','21 years','35 years','18 years'],
-            correctAnswer: "25 years"
-        }, {
-            difficulty: "difficulty-M",
-            question: "Which of the following is a non metal that remains liquid at room temperature?",
-            choices: ['Phosphorous','Bromine','Chlorine','Helium'],
-            correctAnswer: "Bromine"
-        }, {
-            difficulty: "difficulty-M",
-            question: "To which professions earlier leaders who struggled for freedom of India mainly belonged?",
-            choices: ['Lawyers','Teachers','Journalist','All of the above'],
-            correctAnswer: "All of the above"
-        }, {
-            difficulty: "difficulty-M",
-            question: "Who created Pretty Good Privacy (PGP)?",
-            choices: ['Phil Zimmermann','Tim Berners-Lee','Marc Andreessen','Ken Thompson'],
-            correctAnswer: "Phil Zimmermann"
-        }, {
-            difficulty: "difficulty-H",
-            question: "Which of the following place is famous for its gigantic rock-cut statue of Buddha?",
-            choices: ['Bamiyan','Borobudur','Anuradhapuram','Angor Vat'],
-            correctAnswer: "Bamiyan"
-        }, {
-            difficulty: "difficulty-H",
-            question: "The title given by the British Government to Mahatma Gandhi which he surrendered during the non-cooperation movement was",
-            choices: ['Hind Kesari','Kaiser-e-Hind','Rai Bahadur','Rt. Honorable'],
-            correctAnswer: "Kaiser-e-Hind"
-        }];
 
-        var questionCounter = 0;
-        var selections = [];
-        var quiz = $('#quiz');
+    <div class="header">
+        <a href="#default" class="logo">EFI IQ</a>
+        <div class="header-right">
+            
+            <a href="#home"><img src="Assets/Assets/user.png" class="top-icon"></a>
+            <a href="#contact"><img src="Assets/Assets/notification.png" class="top-icon"></a>
+            
+            <a href="#about">About</a>
+        </div>
+    </div>
 
 
-        displayNext();
+
+    <div id="imgages">
+        <img src="Assets/Assets/Bg Piece 1.png" style="float: left;">
+        <img src="Assets/Assets/Bg Piece 2.png" style="float: right; width: 48%;">
+    </div>
+
+    <div id="block">
+
+        <div id="logsec">
+            <img src="Assets/Assets/company_logo.svg" id="logo">
+            <div id="title">
+                <span>Splash Designs</span><br>
+                <small>Welcome Andy</small>
+            </div>
+
+        </div>
+
+        <div class="sec">
+            <h2>5</h2>
+            <span>Total Devices</span>
+        </div>
+
+        <div class="sec">
+            <h2>1</h2>
+            <span>Error Devices</span>
+        </div>
+
+        <div class="sec">
+            <h2>1</h2>
+            <span>Offline Devices</span>
+        </div>
+
+        <div class="sec">
+            <h2>64</h2>
+            <span>Total Job Printed</span>
+        </div>
+
+        <div class="sec">
+            <h2>7</h2>
+            <span>Total Users</span>
+        </div>
 
 
-        $('#next').on('click', function (e) {
-            e.preventDefault();
+    </div>
 
-            if(quiz.is(':animated')) {
-                return false;
-            }
-            choose();
+    <div id="block2">
 
-            if (isNaN(selections[questionCounter])) {
-                alert('Please make a selection!');
-            } else {
-                questionCounter++;
-                displayNext();
-            }
-        });
+        <div class="sec">
+            <img src="Assets/Assets/manage.svg"> <br>
+            <span>Manage</span>
+        </div>
 
-        //this code for handling ths 'prev' button
-        $('#prev').on('click', function (e) {
-            e.preventDefault();
+        <div class="sec">
+            <img src="Assets/Assets/history.svg"> <br>
+            <span>History</span>
+        </div>
 
-            if(quiz.is(':animated')) {
-                return false;
-            }
-            choose();
-            questionCounter--;
-            displayNext();
-        });
+        <div class="sec">
+            <img src="Assets/Assets/colorguard.svg"> <br>
+            <span>ColorGuard</span>
+        </div>
 
-        // this code for handling the 'Start Over' button
-        $('#start').on('click', function (e) {
-            e.preventDefault();
+        <div class="sec">
+            <img src="Assets/Assets/inkorderding.svg"><br>
+            <span>IQ Ink Ordering</span>
+        </div>
 
-            if(quiz.is(':animated')) {
-                return false;
-            }
-            questionCounter = 0;
-            selections = [];
-            displayNext();
-            $('#start').hide();
-        });
+        <div class="sec">
+            <img src="Assets/Assets/smartalerts.svg"> <br>
+            <span>IQ Smart Alerts</span>
+        </div>
+    </div>
 
-        //this code for Animatation of buttons on hover
-        $('.button').on('mouseenter', function () {
-            $(this).addClass('active');
-        });
-        $('.button').on('mouseleave', function () {
-            $(this).removeClass('active');
-        });
+    <div id="block3">
+        <div style="float: left; " class="box">
+            <div style="border-bottom: 2px solid red;">
+                <img src="Assets/Assets/press_reggiani.png">
+                <div style="display: inline; ">
+                    <span>HULKBUSTER </span><br>
+                    <!-- <small>EFI Reggiani Flexy</small> -->
+                </div>
+            </div>
 
-        //this code for the answer selections
-        function createQuestionElement(index) {
-            var qElement = $('<div>', {
-                id: 'question'
-            });
+            <div class="data" style="float: left;">
+                <img src="Assets/Assets/file.svg" class="icon" style="float: left;">
+                <b style="float: left;">9 <br>Job Printed</b>
+            </div>
+
+            <div class="data" style="float: right; ">
+                <img src="Assets/Assets/doc.svg" class="icon" style="float: left;">
+                <b style="float: left;">34.7 <br>Length Printed</b>
+            </div>
+
+            <div class="data" style="float: left;">
+                <img src="Assets/Assets/area.svg" class="icon" style="float: left;">
+                <b style="float: left;">312.3m<sup>2</sup> <br>Area Printed</b>
+            </div>
+
+            <div class="data" style="float: right;">
+                <img src="Assets/Assets/file.svg" class="icon" style="float: left;">
+                <b style="float: left;">3<br>Job In Queue</b>
+            </div>
+        </div>
+
+        <div style="float: right;" class="box">
+            <div style="border-bottom: 2px solid red;">
+                <img src="Assets/Assets/press_reggiani.png">
+                <div style="display: inline; ">
+                    <span>HULKBUSTER </span><br>
+                    <!-- <small>EFI Reggiani Flexy</small> -->
+                </div>
+            </div>
+
+            <div class="data" style="float: left;">
+                <img src="Assets/Assets/file.svg" class="icon" style="float: left;">
+                <b style="float: left;">14 <br>Job Printed</b>
+            </div>  
+
+            <div class="data" style="float: right; ">
+                <img src="Assets/Assets/doc.svg" class="icon" style="float: left;">
+                <b style="float: left;">41 <br>Length Printed</b>
+            </div>
+
+            <div class="data" style="float: left;">
+                <img src="Assets/Assets/area.svg" class="icon" style="float: left;">
+                <b style="float: left;">150.2m<sup>2</sup> <br>Area Printed</b>
+            </div>
+
+            <div class="data" style="float: right;">
+                <img src="Assets/Assets/file.svg" class="icon" style="float: left;">
+                <b style="float: left;">1 <br>Job In Queue</b>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- block 4 -->
+
+    <div id="block4" style="   ">
+        <div style="float: left; height: 100px;" class="box">
+            <div style="border-bottom: 2px solid red;">
+                    <img src="Assets/Assets/press_reggiani.png">
+                <div style="display: inline; ">
+                    <span>HULKBUSTER </span><br>
+                    <!-- <small>EFI Reggiani Flexy</small> -->
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div style="float: right; height: 100px;" class="box">
+            <div style="border-bottom: 2px solid red;">
+                <img src="Assets/Assets/press_reggiani.png">
+                <div style="display: inline; ">
+                    <span>HULKBUSTER </span><br>
+                    <!-- <small>EFI Reggiani Flexy</small> -->
+                </div>
+            </div>
+
+            
+            
+
+            
+        </div>
+    </div>
 
 
-            var header = $('<h2>Question ' + (index + 1) + ':</h2>');
-            qElement.append(header);
-
-            var difficulty = $('<p>').append(questions[index].question);
-            qElement.append(difficulty);
-
-            var question = $('<p>').append(questions[index].difficulty);
-            qElement.append(question);
-
-            var radioButtons = createRadios(index);
-            qElement.append(radioButtons);
-
-            return qElement;
-        }
-
-        //for Creating list of the answer choices as radio inputs
-        function createRadios(index) {
-            var radioList = $('<ul>');
-            var item;
-            var input = '';
-            for (var i = 0; i < questions[index].choices.length; i++) {
-                item = $('<li>');
-                input = '<input type="radio" name="answer" value=' + i + ' />';
-                input += questions[index].choices[i];
-                item.append(input);
-                radioList.append(item);
-            }
-            return radioList;
-        }
-
-        // Reading user answers
-        function choose() {
-            selections[questionCounter] = +$('input[name="answer"]:checked').val();
-        }
-
-        // for Displaying next requested element
-        function displayNext() {
-            quiz.fadeOut(function() {
-                $('#question').remove();
-
-                if(questionCounter < questions.length){
-                    var nextQuestion = createQuestionElement(questionCounter);
-                    quiz.append(nextQuestion).fadeIn();
-                    if (!(isNaN(selections[questionCounter]))) {
-                        $('input[value='+selections[questionCounter]+']').prop('checked', true);
-                    }
-
-                    // Controls display of 'prev' button
-                    if(questionCounter === 1){
-                        $('#prev').show();
-                    } else if(questionCounter === 0){
-
-                        $('#prev').hide();
-                        $('#next').show();
-                    }
-                }else {
-                    var scoreElem = displayScore();
-                    quiz.append(scoreElem).fadeIn();
-                    $('#next').hide();
-                    $('#prev').hide();
-                    $('#start').show();
-                }
-            });
-        }
-
-        // Computes score and returns a paragraph element to be displayed
-        function displayScore() {
-            var score = $('<p>',{id: 'question'});
-
-            var numCorrect = 0;
-            for (var i = 0; i < selections.length; i++) {
-                if (selections[i] === questions[i].correctAnswer) {
-                    numCorrect++;
-                }
-            }
-
-            score.append('You got ' + numCorrect + ' questions out of ' +
-                questions.length + ' right!!!');
-            return score;
-        }
-    })();
-</script>
 </body>
+
 </html>
